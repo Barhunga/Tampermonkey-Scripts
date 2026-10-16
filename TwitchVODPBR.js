@@ -83,7 +83,8 @@
     rateChanged();
 
     function updatePreview() {
-        let preview = document.querySelector('.vod-seekbar-preview-overlay__wrapper p');
+        //let preview = document.querySelector('.vod-seekbar-preview-overlay__wrapper p');
+        let preview = document.querySelector('[data-test-selector*="vod-seekbar-preview-overlay"]')?.nextSibling?.firstChild;
         if (preview) {
             // update preview on vods
             if (!uptime) {
